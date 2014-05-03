@@ -1,0 +1,132 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/activity_main_back"
+    tools:context=".MainActivity" >
+
+    
+    <!-- Main Buttons -->
+    
+   
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:background="@color/horizontal_layout"
+		android:layout_marginTop="@dimen/buttons_layout_marginTop"
+		android:layout_weight="1"
+		android:gravity="bottom" >
+     	
+
+<!-- Gallery -->
+     <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/gallery_icon"
+        android:drawablePadding="10dp"
+        android:layout_height="match_parent"
+        android:textStyle="normal"
+        android:textSize="@dimen/buttons_text_size"
+        android:textColor="@android:color/white"
+        android:typeface="serif"
+        android:background="@drawable/button_gradient"
+        android:onClick="gotoActivity1"
+        android:text="@string/view_gallery"
+        android:layout_marginLeft="@dimen/button_gap"
+        android:layout_marginRight="@dimen/button_gap"
+
+         />
+     
+     <!-- Camera programmatically -->
+  <Button
+        android:id="@+id/btnCapture"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/camera_icon"
+        android:drawablePadding="10dp"
+        android:layout_height="match_parent"
+                android:textStyle="normal"
+        android:textSize="@dimen/buttons_text_size"
+        android:textColor="@android:color/white"
+        android:typeface="serif"
+        android:background="@drawable/button_gradient"
+        android:text="@string/take_photo"
+        android:onClick="startProgCameraActivity"
+         
+        />
+
+
+</LinearLayout>
+
+        <!-- Gallery view -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+		android:background="@color/horizontal_layout"
+        android:layout_weight="1"
+        android:gravity="top" >
+    
+        <!-- New Vote -->
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/vote_icon"
+        android:drawablePadding="10dp"
+        android:layout_height="match_parent"
+        android:textStyle="normal"
+        android:textSize="@dimen/buttons_text_size"
+        android:textColor="@android:color/white"
+        android:typeface="serif"
+        android:background="@drawable/button_gradient"
+        android:text="@string/newVote"
+        android:layout_marginLeft="@dimen/button_gap"
+        android:layout_marginRight="@dimen/button_gap" />
+    
+    <!-- View Votes -->
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/vote_icon"
+        android:drawablePadding="10dp"
+        android:layout_height="match_parent"
+        android:textStyle="normal"
+        android:textSize="@dimen/buttons_text_size"
+        android:textColor="@android:color/white"
+        android:typeface="serif"
+        android:background="@drawable/button_gradient"
+        android:text="@string/viewVotes"
+        android:layout_marginLeft="@dimen/button_gap"
+        android:layout_marginRight="@dimen/button_gap" />
+ 
+</LinearLayout>
+    
+    
+ <!--  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:layout_marginTop="10dp"
+        android:layout_weight="1" >  
+        
+         <Gallery
+      android:id="@+id/gallery1"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+</LinearLayout>
+        
+</LinearLayout>
+
+    
+
