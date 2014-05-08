@@ -380,12 +380,12 @@ public class CameraActivity extends Activity implements Camera.PictureCallback, 
 			    this.sendBroadcast(newPictureIntent);
 			}
 			catch(Exception ex) {
-			    Log.e("CamTimer", "Error broadcasting new picture", ex);
+			    Log.e(".SelfieCat", "Error broadcasting new picture", ex);
 			}
 		}
 	}
 	
-	String savedImageDirectory = Environment.getExternalStorageDirectory() + File.separator + "CamTimer";
+	String savedImageDirectory = Environment.getExternalStorageDirectory() + File.separator + ".SelfieCat";
 	Format dateInFilename = new SimpleDateFormat("yyyyMMdd_HHmmss");
 	
 	Uri saveImageData(byte[] data, int pictureNum) {

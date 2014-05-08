@@ -2,7 +2,10 @@ package com.selfiecatalog;
 
 
 
+import java.io.File;
+
 import android.os.Bundle;
+import android.os.Environment;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
@@ -10,6 +13,8 @@ import android.widget.Toast;
 import android.app.Activity;
 
 public class MainActivity extends Activity {
+	
+	String savedImageDirectory = Environment.getExternalStorageDirectory() + File.separator + ".SelfieCat";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +32,8 @@ public class MainActivity extends Activity {
 	}
 	
 	//Open DisplayPicture activity (gallery) by clicking Gallery button.
-	public void gotoActivity1(View v){
-		Intent intent = new Intent(this, DisplayPicture.class);
-		startActivity(intent);
+	public void openLibrary(View v){
+		startActivity(LibraryActivity.intentWithImageDirectory(this, savedImageDirectory));
 		//Toast.makeText(getApplicationContext(), "Open Gallery", Toast.LENGTH_SHORT).show();
 	}
 	

@@ -38,7 +38,7 @@
         android:textColor="@android:color/white"
         android:typeface="serif"
         android:background="@drawable/button_gradient"
-        android:onClick="gotoActivity1"
+        android:onClick="openLibrary"
         android:text="@string/view_gallery"
         android:layout_marginLeft="@dimen/button_gap"
         android:layout_marginRight="@dimen/button_gap"
